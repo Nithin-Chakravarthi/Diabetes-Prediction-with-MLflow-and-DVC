@@ -114,6 +114,33 @@ train:
   max_depth: 10
   # Class weight parameters for imbalanced medical data
   class_weight: balanced
+
+evaluate:
+  # Input paths for evaluation
+  data: data/processed/diabetes_processed.csv
+  model: models/diabetes_model.pkl
+  
+  # Output paths for evaluation results
+  metrics_file: reports/metrics.json
+  confusion_matrix_path: reports/confusion_matrix.png
+  roc_curve_path: reports/roc_curve.png
+  
+  # Evaluation parameters
+  prediction_threshold: 0.5  # Threshold for converting probabilities to class predictions
+  cv_folds: 5  # Number of cross-validation folds
+  
+  # Metrics to calculate
+  metrics:
+    - accuracy
+    - precision
+    - recall
+    - f1
+    - roc_auc
+    - average_precision
+  
+  # Medical-specific thresholds and settings
+  clinical_sensitivity_threshold: 0.9  # Minimum required sensitivity for medical screening
+  specificity_target: 0.8  # Target specificity for medical diagnosis
 ```
 
 ## Model Details
