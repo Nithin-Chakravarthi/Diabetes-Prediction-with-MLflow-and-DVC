@@ -90,9 +90,9 @@ pip install -r requirements.txt
 
 3. Configure MLflow:
 ```bash
-export MLFLOW_TRACKING_URI="https://dagshub.com/nithinchakravarthi236/machinelearningpipeline.mlflow"
-export MLFLOW_TRACKING_USERNAME="nithinchakravarthi236"
-export MLFLOW_TRACKING_PASSWORD="3d5650099751e2a9d291ab28245f916c35afb332"
+export MLFLOW_TRACKING_URI="https://dagshub.com/your-username/your-repo.mlflow"
+export MLFLOW_TRACKING_USERNAME="your-username"
+export MLFLOW_TRACKING_PASSWORD="your-password"
 ```
 
 ## Configuration
